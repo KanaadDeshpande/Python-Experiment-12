@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+{% load crispy_forms_tags %}
+{% block start %}
+
+<div class="content-section col-md-8 col-md-offset-2">
+  <center>
+
+    <form method="POST" style="border: 1px solid black; margin: 4%; padding:10%; border-radius:1%;">
+      {% csrf_token %}
+      <fieldset class="form-group">
+        <h1>Login</h1>
+        <input id="email" type="text" autocomplete="off" name="email" value="" class="form-control input-lg"
+          placeholder="Email" />
+        <br><br>
+        <input id="password" type="password" autocomplete="off" name="password" value="" class="form-control input-lg"
+          placeholder="Password" />
+      </fieldset>
+      <center>
+        <button style="background: black; font-size: 2rem; padding:1%; color: #fff" class="btn btn-outline-info"
+          type="submit">
+          <span class="glyphicon glyphicon-log-in">
+
+          </span> &nbsp; login</button>
+      </center>
+      <br />
+      <sub style="text-align: center;">
+        <a href="{% url 'register' %}" style="text-decoration: none; padding:2%; cursor:pointer; margin-right:2%;">
+          <h3>Don't have an account? Sign up!</h3>
+        </a>
+      </sub>
+    </form>
+  </center>
+</div>
+
+{% endblock start %}
