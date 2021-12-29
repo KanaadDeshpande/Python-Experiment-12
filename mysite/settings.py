@@ -14,7 +14,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'crispy_forms'
+    'crispy_forms',
+    'django_extensions'
 ]
 
 MIDDLEWARE = [
@@ -67,3 +68,7 @@ MEDIA_ROOT = os.path.join(VENV_PATH, 'media')
 AUTH_USER_MODEL = 'core.User'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+GRAPH_MODELS = {
+    'all_applications': True,
+    'group_models': True,
+}
