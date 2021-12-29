@@ -25,10 +25,10 @@ Volume serial number is 4A5A-F313
     |   ├── settings.py
     |   ├── urls.py
     |   ├── wsgi.py
-    |   \ **init**.py
+    |   └── **init**.py
     |
     └──templates
     |  ├──index.html
     |  ├──login.html
-    |  ├──register.html
+    |  └──register.html
 ```
